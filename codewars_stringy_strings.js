@@ -12,6 +12,17 @@ with size 12 should return : '101010101010'.
 The size will always be positive and will only use whole numbers.
 */
 
-function stringy(size) {
-  // your code here   
+const stringy = (size) => {
+  let str = '';
+  let one = true;
+  while(size > 0) {
+    if(one === true) {
+      str += '1';
+    } else {
+      str += '0';
+    }
+    one = !one;
+    size--;
+  }
+  return str;
 }
